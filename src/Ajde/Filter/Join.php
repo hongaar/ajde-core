@@ -1,0 +1,34 @@
+<?php
+
+
+namespace Ajde\Filter;
+
+use Ajde\Filter;
+use Ajde\Db\Table;
+
+
+
+class Join extends Filter
+{	
+	protected $_table;
+	protected $_ownerField;
+	protected $_childField;
+	
+	public function __construct($table, $ownerField, $childField)
+	{
+		$this->_table = $table;
+		$this->_ownerField = $ownerField;
+		$this->_childField = $childField;
+	}
+	
+	public function prepare(Table $table = null)
+	{
+		$sql = $this->_table . ' ON ' . $this->_ownerField . ' = ' . $this->_childField;
+		return array(
+			'join' => array(
+				'arguments' => array($sql),
+				'values' => array()
+			)
+		);
+	}
+}
