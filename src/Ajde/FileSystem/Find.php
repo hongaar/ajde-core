@@ -1,18 +1,16 @@
 <?php
 
+namespace Ajde\FileSystem;
 
-namespace Ajde\FS;
-
-use Ajde\Object\Static;
+use Ajde\Object\StaticObject;
 use Config;
 
 
-
-class Find extends Static
+class Find extends StaticObject
 {
 	public static function findFile($dir, $pattern)
 	{
-		$search = Config::get("local_root") . DIRECTORY_SEPARATOR . $dir . $pattern;
+		$search = LOCAL_ROOT . DIRECTORY_SEPARATOR . $dir . $pattern;
 		$result = glob($search);
 		if ($result === false) {
 			return false;
@@ -25,7 +23,7 @@ class Find extends Static
 	
 	public static function findFiles($dir, $pattern, $flags = 0)
 	{
-		$search = Config::get("local_root") . DIRECTORY_SEPARATOR . $dir . $pattern;
+		$search = LOCAL_ROOT . DIRECTORY_SEPARATOR . $dir . $pattern;
 		$return = array();
 		$files = (array) glob($search, $flags);
 		foreach ($files as $filename) {

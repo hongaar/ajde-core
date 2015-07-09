@@ -5,7 +5,7 @@ namespace Ajde\User;
 use Ajde\Controller as AjdeController;
 use \Ajde;
 use Ajde\Http\Response;
-use Ajde\Event;
+use Ajde\Event\Dispatcher;
 use Ajde\Model;
 use UserModel;
 
@@ -43,7 +43,7 @@ abstract class Controller extends AjdeController
 	{
 		// Add timeout warning to layout
 		if ($this->getLoggedInUser() !== false) {
-			Event::register('Ajde_Layout', 'beforeGetContents', 'requireTimeoutWarning');
+			Dispatcher::register('Ajde_Layout', 'beforeGetContents', 'requireTimeoutWarning');
 		}
 	}
 	

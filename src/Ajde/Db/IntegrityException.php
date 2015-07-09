@@ -2,7 +2,7 @@
 
 namespace Ajde\Db;
 
-use Ajde\Exception;
+use Ajde\Core\Exception;
 
 
 

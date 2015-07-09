@@ -7,7 +7,7 @@ use PDO as PDO;
 use Ajde\Db\PDO as AjdeDbPDO;
 use Exception as Exception;
 use Ajde\Exception\Log;
-use Ajde\Exception as AjdeException;
+use Ajde\Core\Exception as AjdeException;
 
 
 

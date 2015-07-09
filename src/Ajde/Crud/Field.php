@@ -7,7 +7,7 @@ use Ajde\Object\Standard;
 use Ajde\Crud;
 use Ajde\Template;
 use \Ajde;
-use Ajde\Exception;
+use Ajde\Core\Exception;
 
 
 

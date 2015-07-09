@@ -2,7 +2,7 @@
 
 namespace Ajde\Core\Exception;
 
-use Ajde\Exception;
+use Ajde\Core\Exception;
 
 
 

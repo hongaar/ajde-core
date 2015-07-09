@@ -7,7 +7,7 @@ use Ajde\Object\Standard;
 use \Ajde;
 use Ajde\Layout;
 use Config;
-use Ajde\Exception;
+use Ajde\Core\Exception;
 use Ajde\Cache;
 
 

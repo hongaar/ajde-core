@@ -8,7 +8,7 @@ use Ajde\Core\Exception\Deprecated;
 use Ajde\Session;
 use Ajde\Resource\Local as AjdeResourceLocal;
 use \Ajde;
-use Ajde\Exception;
+use Ajde\Core\Exception;
 use Config;
 
 

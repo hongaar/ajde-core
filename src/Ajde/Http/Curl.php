@@ -6,7 +6,7 @@ namespace Ajde\Http;
 use Ajde\Core\Exception\Deprecated;
 use Exception as Exception;
 use Ajde\Log;
-use Ajde\Exception as AjdeException;
+use Ajde\Core\Exception as AjdeException;
 
 
 

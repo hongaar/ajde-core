@@ -7,9 +7,9 @@ namespace Ajde\Crud\Cms;
 
 
 use Ajde\Crud\Cms\Meta\Fieldlist;
-use Ajde\FS\Find;
+use Ajde\FileSystem\Find;
 use Ajde\Core\Autoloader;
-use Ajde\Exception;
+use Ajde\Core\Exception;
 use Ajde\Model;
 use MetaCollection;
 use Ajde\Filter\WhereGroup;

@@ -5,11 +5,11 @@ namespace Ajde\Core;
 
 use Ajde\Object\Singleton;
 use Ajde\Http\Curl;
-use Ajde\Exception;
+use Ajde\Core\Exception;
 use ZipArchive;
-use Ajde\FS\Directory;
+use Ajde\FileSystem\Directory;
 use Config;
-use Ajde\FS\Find;
+use Ajde\FileSystem\Find;
 use Ajde\Db;
 
 

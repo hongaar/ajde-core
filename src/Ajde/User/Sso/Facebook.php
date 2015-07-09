@@ -6,7 +6,7 @@ namespace Ajde\User\Sso;
 use Ajde\User\Sso;
 use Ajde\Social\Provider\Facebook as AjdeSocialProviderFacebook;
 use SsoModel;
-use Ajde\Exception;
+use Ajde\Core\Exception;
 use Config;
 use \Ajde;
 

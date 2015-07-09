@@ -7,7 +7,7 @@ use Ajde\Object\Standard;
 use Ajde_Shop_Transaction_Provider_Interface;
 use Ajde\Core\ExternalLibs;
 use Ajde\Core\Autoloader;
-use Ajde\Exception;
+use Ajde\Core\Exception;
 use Config;
 use Ajde\Log;
 

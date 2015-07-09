@@ -7,10 +7,10 @@ use Ajde\Model;
 use Config;
 use Ajde\Shop\Transaction\Provider;
 use Ajde\Db\Function;
-use Ajde\Event;
+use Ajde\Event\Dispatcher;
 use Ajde\View;
 use Ajde\Shop\Cart;
-use Ajde\Exception;
+use Ajde\Core\Exception;
 use TransactionItemCollection;
 use Ajde\Filter\Where;
 use Ajde\Filter;
@@ -68,7 +68,7 @@ abstract class Transaction extends Model
         $this->added = new Function("NOW()");
 
         // Event
-        Event::trigger($this, 'onCreate');
+        Dispatcher::trigger($this, 'onCreate');
 	}
 	
 	public function generateSecret($length = 255)
@@ -170,7 +170,7 @@ abstract class Transaction extends Model
 
     public function paid()
     {
-        Event::trigger($this, 'onPaid');
+        Dispatcher::trigger($this, 'onPaid');
 
         $this->payment_status = 'completed';
         $this->save();

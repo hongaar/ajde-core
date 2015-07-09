@@ -5,7 +5,7 @@ namespace Ajde\Template\Parser;
 use Ajde\Template\Parser;
 use DOMDocument;
 use ErrorException;
-use Ajde\Exception;
+use Ajde\Core\Exception;
 use Ajde\Component;
 use DOMElement;
 

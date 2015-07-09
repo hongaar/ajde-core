@@ -10,7 +10,7 @@ use Config;
 use Ajde\Exception\Log as AjdeExceptionLog;
 use Ajde\Http\Response;
 use \Ajde;
-use Ajde\Exception as AjdeException;
+use Ajde\Core\Exception as AjdeException;
 use Ajde\Core\Documentation;
 use Ajde\Dump;
 use Ajde\Log as AjdeLog;

@@ -11,7 +11,7 @@ use Ajde\Http\Response;
 use Ajde\Exception\Log;
 use Ajde\Cache;
 use Ajde\Component\String;
-use Ajde\Exception;
+use Ajde\Core\Exception;
 use Ajde\Core\Route;
 
 

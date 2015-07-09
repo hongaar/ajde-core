@@ -5,7 +5,7 @@ namespace Ajde\Crud\Field;
 
 use Ajde\Crud\Field;
 use Ajde\Component\String;
-use Ajde\Exception;
+use Ajde\Core\Exception;
 
 
 

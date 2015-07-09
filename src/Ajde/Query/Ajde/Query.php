@@ -4,7 +4,7 @@
 namespace Ajde;
 
 use Ajde\Object\Standard;
-use Ajde\Exception;
+use Ajde\Core\Exception;
 
 
 

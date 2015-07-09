@@ -1,43 +1,26 @@
 <?php
-
-
 namespace Ajde\Object;
 
-use Ajde\Object\Magic;
-use Ajde_Object_Singleton_Interface;
+use Ajde\Object\Singleton\SingletonInterface;
 
 
-
-interface Ajde_Object_Singleton_Interface
+abstract class Singleton extends Magic implements SingletonInterface
 {
-	/**
-	 * Example:
-	 *
-	 * public static function getInstance()
-	 * {
-     *    static $instance;
-     *    return $instance === null ? $instance = new self : $instance;
-	 * }
-	 *
-	 * @abstract
-	 */
-    public static function getInstance();
-}
+    protected static $__pattern = self::OBJECT_PATTERN_SINGLETON;
 
-abstract class Singleton extends Magic
-implements Ajde_Object_Singleton_Interface
-{
-	protected static $__pattern = self::OBJECT_PATTERN_SINGLETON;
+    public static function __getPattern()
+    {
+        return self::$__pattern;
+    }
 
-	public static function __getPattern()
-	{
-		return self::$__pattern;
-	}
+    // Do not allow an explicit call of the constructor
+    protected function __construct()
+    {
+    }
 
-	// Do not allow an explicit call of the constructor
-    protected function __construct() {}
-
-	// Do not allow the clone operation
-    private final function __clone() {}
+    // Do not allow the clone operation
+    private final function __clone()
+    {
+    }
 }
 

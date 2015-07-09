@@ -15,9 +15,9 @@ use Ajde\Crud\Field\Boolean;
 use Ajde\Crud\Field\File;
 use Config;
 use Ajde\Http\Response;
-use Ajde\Event;
+use Ajde\Event\Dispatcher;
 use Ajde\Core\ExternalLibs;
-use Ajde\Exception as AjdeException;
+use Ajde\Core\Exception as AjdeException;
 use Ajde\Session;
 use Ajde\Collection\View;
 use \Ajde;
@@ -411,7 +411,7 @@ class Crud extends Standard
 	
 	public function fireCrudLoadedOnModel($model)
 	{
-		Event::trigger($model, 'afterCrudLoaded');
+		Dispatcher::trigger($model, 'afterCrudLoaded');
 	}
 	
 	public function getFields()

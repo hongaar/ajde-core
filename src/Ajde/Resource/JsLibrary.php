@@ -4,7 +4,7 @@
 namespace Ajde\Resource;
 
 use Ajde\Object\Static;
-use Ajde\Exception;
+use Ajde\Core\Exception;
 
 
 

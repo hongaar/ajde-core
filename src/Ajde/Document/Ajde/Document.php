@@ -12,8 +12,8 @@ use Ajde\Layout;
 use Config;
 use Ajde\Resource;
 use Ajde\Core\Exception\Deprecated;
-use Ajde\Exception;
-use Ajde\Event;
+use Ajde\Core\Exception;
+use Ajde\Event\Dispatcher;
 
 
 
@@ -223,11 +223,11 @@ abstract class Document extends Standard
 					throw new Exception('Processor ' . $processorClass . ' not found', 90022);
 				}
 				if ($registerOn == 'layout') {
-					Event::register('Ajde_Layout', 'beforeGetContents', $processorClass . '::preProcess');
-					Event::register('Ajde_Layout', 'afterGetContents', $processorClass . '::postProcess');
+					Dispatcher::register('Ajde_Layout', 'beforeGetContents', $processorClass . '::preProcess');
+					Dispatcher::register('Ajde_Layout', 'afterGetContents', $processorClass . '::postProcess');
 				} elseif($registerOn == 'compressor') {
-					Event::register('Ajde_Resource_Local_Compressor', 'beforeCompress', $processorClass . '::preCompress');
-					Event::register('Ajde_Resource_Local_Compressor', 'afterCompress', $processorClass . '::postCompress');
+					Dispatcher::register('Ajde_Resource_Local_Compressor', 'beforeCompress', $processorClass . '::preCompress');
+					Dispatcher::register('Ajde_Resource_Local_Compressor', 'afterCompress', $processorClass . '::postCompress');
 				} else {
 					// TODO:
 					throw new Exception('Document processor must be registered on either \'layout\' or \'compressor\'');

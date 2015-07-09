@@ -6,10 +6,10 @@ namespace Ajde;
 use Ajde\Object\Standard;
 use Ajde\Core\Exception\Routing;
 use \Ajde;
-use Ajde\Exception;
-use Ajde\FS\Find;
+use Ajde\Core\Exception;
+use Ajde\FileSystem\Find;
 use Ajde\Template\Parser;
-use Ajde\Event;
+use Ajde\Event\Dispatcher;
 use Ajde\Cache;
 use Ajde\Document\Format\Html;
 
@@ -183,11 +183,11 @@ class Template extends Standard
 	{
 		if (!isset($this->_contents))
 		{
-			Event::trigger($this, 'beforeGetContents');
+			Dispatcher::trigger($this, 'beforeGetContents');
 			Cache::getInstance()->addFile($this->getFilename());
 			$contents = $this->getParser()->parse($this);
 			$this->setContents($contents);
-			Event::trigger($this, 'afterGetContents');
+			Dispatcher::trigger($this, 'afterGetContents');
 		}
 		return $this->_contents;
 	}

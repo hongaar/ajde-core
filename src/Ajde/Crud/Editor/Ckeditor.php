@@ -4,7 +4,7 @@
 namespace Ajde\Crud\Editor;
 
 use Ajde\Crud\Editor;
-use Ajde\Exception;
+use Ajde\Core\Exception;
 use Ajde\Document\Format\Html;
 
 

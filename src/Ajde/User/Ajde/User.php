@@ -6,7 +6,7 @@ namespace Ajde;
 use Ajde\Model;
 use Ajde\Session;
 use Ajde\Dump;
-use Ajde\Exception;
+use Ajde\Core\Exception;
 use Ajde\Cookie;
 use Config;
 use Ajde\Session\Flash;

@@ -6,7 +6,7 @@ namespace Ajde\Shop\Cart;
 use Ajde\Model;
 use Ajde\Shop\Cart;
 use Exception as Exception;
-use Ajde\Exception as AjdeException;
+use Ajde\Core\Exception as AjdeException;
 use Config;
 
 

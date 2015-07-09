@@ -5,7 +5,7 @@ namespace Ajde\Template\Parser\Xhtml;
 use DOMElement;
 use Ajde\Component;
 use Ajde\Template\Parser;
-use Ajde\Exception;
+use Ajde\Core\Exception;
 
 
 

@@ -5,12 +5,12 @@ namespace Ajde\Core;
 
 use Ajde\Object\Standard;
 use Ajde\Lang;
-use Ajde\Event;
+use Ajde\Event\Dispatcher;
 use Config;
 use Ajde\Core\Exception\Routing;
 use \Ajde;
 use Ajde\Core\Exception\Deprecated;
-use Ajde\Exception;
+use Ajde\Core\Exception;
 
 
 
@@ -34,7 +34,7 @@ class Route extends Standard
                 $langInstance->setGlobalLang($lang);
 			}
 		}
-        Event::trigger($this, 'onAfterLangSet');
+        Dispatcher::trigger($this, 'onAfterLangSet');
 		if (!$route) {
 			$route = Config::get('homepageRoute');
 		}
@@ -45,7 +45,7 @@ class Route extends Standard
 		} else {
 			$this->_route = $route;
 		}
-        Event::trigger($this, 'onAfterRouteSet');
+        Dispatcher::trigger($this, 'onAfterRouteSet');
 		// Get route parts
 		$routeParts = $this->_extractRouteParts();
 		if (empty($routeParts)) {

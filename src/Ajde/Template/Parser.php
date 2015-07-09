@@ -4,7 +4,7 @@ namespace Ajde\Template;
 
 use Ajde\Object\Standard;
 use Ajde\Template;
-use Ajde\Exception;
+use Ajde\Core\Exception;
 use Ajde\Template\Parser\Phtml\Helper;
 
 

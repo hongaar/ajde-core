@@ -5,12 +5,12 @@ namespace Ajde\Resource\Local;
 
 use Ajde\Object\Standard;
 use Ajde\Core\Autoloader;
-use Ajde\Exception;
+use Ajde\Core\Exception;
 use Ajde\Resource\Local;
-use Ajde\FS\Find;
+use Ajde\FileSystem\Find;
 use Ajde\Resource\Local\Compressed;
 use Ajde\Document;
-use Ajde\Event;
+use Ajde\Event\Dispatcher;
 
 
 
@@ -172,9 +172,9 @@ abstract class Compressor extends Standard
 		}
 		
 		// Execute compression
-		Event::trigger($this, 'beforeCompress');
+		Dispatcher::trigger($this, 'beforeCompress');
 		$this->compress();
-		Event::trigger($this, 'afterCompress');
+		Dispatcher::trigger($this, 'afterCompress');
 		
 		// Save file to cache folder
 		file_put_contents($this->getFilename(), $this->_contents);

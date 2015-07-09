@@ -3,7 +3,7 @@
 
 namespace Ajde\Core\Autoloader;
 
-use Ajde\Exception as AjdeException;
+use Ajde\Core\Exception as AjdeException;
 
 
 

@@ -7,7 +7,7 @@ use Ajde\Embed;
 use Ajde\Http\Curl;
 use Exception as Exception;
 use Ajde\Exception\Log;
-use Ajde\Exception as AjdeException;
+use Ajde\Core\Exception as AjdeException;
 
 
 

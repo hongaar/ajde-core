@@ -5,7 +5,7 @@ namespace Ajde\Log\Writer;
 
 use Ajde\Log\Writer\AbstractWriter;
 use Ajde\Log;
-use Ajde\Exception;
+use Ajde\Core\Exception;
 
 
 

@@ -5,7 +5,7 @@ namespace Ajde;
 
 use Ajde\Object\Singleton;
 use Ajde\Model;
-use Ajde\Event;
+use Ajde\Event\Dispatcher;
 use Ajde\Core\Route;
 use SettingModel;
 use NodeModel;
@@ -39,9 +39,9 @@ class Cms extends Singleton
 
     public function __bootstrap()
     {
-        Event::register('Ajde_Core_Route', 'onAfterLangSet', array($this, 'setHomepage'));
-        Event::register('Ajde_Core_Route', 'onAfterRouteSet', array($this, 'detectNodeSlug'));
-        Event::register('Ajde_Core_Route', 'onAfterRouteSet', array($this, 'detectShopSlug'));
+        Dispatcher::register('Ajde_Core_Route', 'onAfterLangSet', array($this, 'setHomepage'));
+        Dispatcher::register('Ajde_Core_Route', 'onAfterRouteSet', array($this, 'detectNodeSlug'));
+        Dispatcher::register('Ajde_Core_Route', 'onAfterRouteSet', array($this, 'detectShopSlug'));
         return true;
     }
 

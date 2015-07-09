@@ -4,10 +4,10 @@
 namespace Ajde;
 
 use Ajde\Object\Standard;
-use Ajde\Event;
+use Ajde\Event\Dispatcher;
 use Ajde\Controller;
 use Ajde\Core\Autoloader;
-use Ajde\FS\Find;
+use Ajde\FileSystem\Find;
 use Ajde\Db;
 use Ajde\Model as AjdeModel;
 use PDO;
@@ -20,7 +20,7 @@ use DateTime;
 use Ajde\Db\Function;
 use Ajde\Db\IntegrityException;
 use Ajde\Db\Table;
-use Ajde\Exception;
+use Ajde\Core\Exception;
 use Ajde\Model\ValidatorAbstract;
 use Ajde\Model\Validator;
 use Ajde\Component\String;
@@ -60,8 +60,8 @@ class Model extends Standard
 		}
 		
 		// Extend Ajde_Controller
-		if (!Event::has('Ajde_Controller', 'call', 'Ajde_Model::extendController')) {
-			Event::register('Ajde_Controller', 'call', 'Ajde_Model::extendController');
+		if (!Dispatcher::has('Ajde_Controller', 'call', 'Ajde_Model::extendController')) {
+			Dispatcher::register('Ajde_Controller', 'call', 'Ajde_Model::extendController');
 		}
 		// Extend autoloader
 		if ($controller instanceof Controller) {

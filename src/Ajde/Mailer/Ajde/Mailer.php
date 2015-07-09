@@ -6,7 +6,7 @@ use \PHPMailer;
 use Config;
 use EmailModel;
 use MailerlogModel;
-use Ajde\Exception;
+use Ajde\Core\Exception;
 
 
 

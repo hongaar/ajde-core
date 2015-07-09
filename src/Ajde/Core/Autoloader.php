@@ -5,7 +5,7 @@ namespace Ajde\Core;
 
 use Config;
 use Exception as Exception;
-use Ajde\Exception as AjdeException;
+use Ajde\Core\Exception as AjdeException;
 
 
 

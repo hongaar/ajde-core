@@ -7,7 +7,7 @@ use Ajde\Object\Standard;
 use Exception as Exception;
 use Ajde\Dump;
 use Ajde\Model;
-use Ajde\Exception as AjdeException;
+use Ajde\Core\Exception as AjdeException;
 use Ajde\Component\String;
 use Config;
 

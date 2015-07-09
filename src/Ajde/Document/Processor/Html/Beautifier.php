@@ -8,7 +8,7 @@ use Ajde\Document\Processor;
 use Ajde\Layout;
 use Ajde\Resource\Local\Compressor;
 use Ajde\Core\Autoloader;
-use Ajde\Exception;
+use Ajde\Core\Exception;
 use Tidy;
 
 

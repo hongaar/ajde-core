@@ -7,7 +7,7 @@ use Ajde\User\Sso;
 use Ajde\Session;
 use SsoModel;
 use Ajde_Social_Provider_Twitter;
-use Ajde\Exception;
+use Ajde\Core\Exception;
 use Config;
 use \Ajde;
 

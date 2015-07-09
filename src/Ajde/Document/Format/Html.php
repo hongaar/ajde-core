@@ -4,7 +4,7 @@
 namespace Ajde\Document\Format;
 
 use Ajde\Document;
-use Ajde\Event;
+use Ajde\Event\Dispatcher;
 use Config;
 use Ajde\Resource\Local;
 use Ajde\Resource\Local\Compressor;
@@ -41,7 +41,7 @@ class Html extends Document
 		 * We add the resources before the template is included, otherwise the
 		 * layout resources never make it into the <head> section.
 		 */
-		Event::register('Ajde_Template', 'beforeGetContents', array($this, 'autoAddResources'));
+		Dispatcher::register('Ajde_Template', 'beforeGetContents', array($this, 'autoAddResources'));
 		parent::__construct();
 	}
 

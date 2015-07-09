@@ -6,13 +6,13 @@ namespace Ajde;
 use Ajde\Object\Standard;
 use Iterator;
 use Countable;
-use Ajde\Event;
+use Ajde\Event\Dispatcher;
 use Ajde\Controller;
 use Ajde\Core\Autoloader;
 use Ajde\Db;
 use Ajde\Query;
 use PDO as PDO;
-use Ajde\Exception;
+use Ajde\Core\Exception;
 use Ajde\Filter\Link;
 use Ajde\Filter;
 use Ajde\Filter\Where;
@@ -70,8 +70,8 @@ class Collection extends Standard implements Iterator, Countable {
 	public static function register($controller)
 	{
 		// Extend Ajde_Controller
-		if (!Event::has('Ajde_Controller', 'call', 'Ajde_Collection::extendController')) {
-			Event::register('Ajde_Controller', 'call', 'Ajde_Collection::extendController');
+		if (!Dispatcher::has('Ajde_Controller', 'call', 'Ajde_Collection::extendController')) {
+			Dispatcher::register('Ajde_Controller', 'call', 'Ajde_Collection::extendController');
 		}
 		// Extend autoloader
 		if ($controller instanceof Controller) {

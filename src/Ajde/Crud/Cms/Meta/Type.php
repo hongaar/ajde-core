@@ -6,7 +6,7 @@ namespace Ajde\Crud\Cms\Meta;
 use Ajde\Crud\Cms\Meta\Fieldlist;
 use MetaModel;
 use Ajde\Model;
-use Ajde\Exception;
+use Ajde\Core\Exception;
 use Ajde\Crud\Options\Fields\Field;
 
 

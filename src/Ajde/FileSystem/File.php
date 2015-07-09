@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Ajde\FS;
+namespace Ajde\FileSystem;
 
 use Ajde\Object\Static;
 

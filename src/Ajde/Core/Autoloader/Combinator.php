@@ -4,7 +4,7 @@
 namespace Ajde\Core\Autoloader;
 
 use ReflectionClass;
-use Ajde\Exception;
+use Ajde\Core\Exception;
 
 
 

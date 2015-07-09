@@ -6,7 +6,7 @@ namespace Ajde\Shop;
 use Ajde\Model;
 use Ajde\Db\Function;
 use UserModel;
-use Ajde\Exception;
+use Ajde\Core\Exception;
 
 
 

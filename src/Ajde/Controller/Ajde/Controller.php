@@ -6,8 +6,8 @@ namespace Ajde;
 use Ajde\Object\Standard;
 use Config;
 use Ajde\Core\Route;
-use Ajde\Event;
-use Ajde\Exception as AjdeException;
+use Ajde\Event\Dispatcher;
+use Ajde\Core\Exception as AjdeException;
 use Ajde\Core\Autoloader;
 use Ajde\Http\Response;
 use Ajde\Core\Exception\Routing;
@@ -49,8 +49,8 @@ class Controller extends Standard
 	
 	public function __fallback($method, $arguments)
 	{
-		if (Event::has('Ajde_Controller', 'call')) {
-			return Event::trigger('Ajde_Controller', 'call', array($method, $arguments));	
+		if (Dispatcher::has('Ajde_Controller', 'call')) {
+			return Dispatcher::trigger('Ajde_Controller', 'call', array($method, $arguments));
 		}
 		throw new AjdeException("Call to undefined method ".get_class($this)."::$method()", 90006);		
 	}	

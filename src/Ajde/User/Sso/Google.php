@@ -8,7 +8,7 @@ use Ajde\Session;
 use Ajde_Social_Provider_Google;
 use Config;
 use SsoModel;
-use Ajde\Exception;
+use Ajde\Core\Exception;
 use \Ajde;
 use Google_Service_Plus_PersonImage;
 

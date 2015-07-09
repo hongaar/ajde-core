@@ -5,7 +5,7 @@ namespace Ajde;
 
 use Ajde\Object\Singleton;
 use Config;
-use Ajde\FS\Find;
+use Ajde\FileSystem\Find;
 use Ajde\Core\Exception\Deprecated;
 
 
