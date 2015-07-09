@@ -1,0 +1,22 @@
+{
+    "name": "nabble/ajde-core",
+    "description": "Library files for Ajde",
+    "type": "library",
+    "license": "MIT License",
+    "authors": [
+        {
+            "name": "Joram van den Boezem",
+            "email": "joram@nabble.nl"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "require-dev": {},
+    "autoload": {
+        "psr-4": {
+            "Ajde\\": "src/Ajde/"
+        }
+    }
+}
